@@ -34,16 +34,6 @@ app.get("/health", (req, res) => {
 
 app.use("/api/v1/user", userRoute);
 
-connectDb()
-  .then(() => {
-    app.listen(process.env.PORT || 3000, () => {
-      console.log(`server is running on http://localhost:${process.env.PORT}`);
-    });
-    app.on("error", (err: any) => {
-      console.log(err);
-    });
-  })
-  .catch((err) => {
-    console.log(err);
-    process.exit(1);
-  });
+connectDb();
+
+export default app;
