@@ -1,11 +1,11 @@
 {
   "name": "server",
   "version": "1.0.0",
-  "main": "app.ts",
+  "main": "index.ts",
   "scripts": {
-    "dev": "npx nodemon src/app.ts",
+    "dev": "npx nodemon src/index.ts",
     "build": "tsc ",
-    "start": "npm run build && node build/app.js"
+    "start": "npm run build && node build/index.js"
   },
   "keywords": [],
   "author": "",
